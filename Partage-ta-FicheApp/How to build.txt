@@ -1,0 +1,3 @@
+Build : cordova build android --prod --release -- -- --packageType=bundle
+
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore partage-ta-fiche.keystore app-release.aab partage-ta-fiche

@@ -1,42 +1,41 @@
-window.addEventListener("load", (event) => {
+ window.addEventListener("load", (event) => {
+  /*
   fetch("https://partage-ta-fiche.fr/api/lastarticle")
     .then((response) => response.json())
     .then((data) => {
       let article = data.response;
       const articleView = document.querySelector(".articleview");
 
-      article
-        .forEach((article) => {
-          const articleElem = document.createElement("article");
-          articleView.appendChild(articleElem);
+      article.forEach((article) => {
+        const articleElem = document.createElement("article");
+        articleView.appendChild(articleElem);
 
-          const articleCard = document.createElement("div");
-          articleCard.classList.add("articlecard");
-          articleElem.appendChild(articleCard);
+        const articleCard = document.createElement("div");
+        articleCard.classList.add("articlecard");
+        articleElem.appendChild(articleCard);
 
-          const header = document.createElement("header");
-          articleCard.appendChild(header);
+        const header = document.createElement("header");
+        articleCard.appendChild(header);
 
-          const title = document.createElement("h1");
-          title.classList.add("titlearticle");
-          title.innerText = article.title;
-          header.appendChild(title);
+        const title = document.createElement("h1");
+        title.classList.add("titlearticle");
+        title.innerText = article.title;
+        header.appendChild(title);
 
-          const desc = document.createElement("p");
-          desc.innerText = article.desc;
-          articleCard.appendChild(desc);
+        const desc = document.createElement("p");
+        desc.innerText = article.desc;
+        articleCard.appendChild(desc);
 
-          const viewArticle = document.createElement("div");
-          viewArticle.classList.add("viewarticle");
-          articleCard.appendChild(viewArticle);
+        const viewArticle = document.createElement("div");
+        viewArticle.classList.add("viewarticle");
+        articleCard.appendChild(viewArticle);
 
-          const link = document.createElement("a");
-          link.href = `/view/article/${article.id}`;
-          link.innerText = "Voir l'article";
-          link.classList.add("centered");
-          viewArticle.appendChild(link);
-        })
-        
+        const link = document.createElement("a");
+        link.href = `/viewarticle.html?articleid=${article.id}`;
+        link.innerText = "Voir l'article";
+        link.classList.add("centered");
+        viewArticle.appendChild(link);
+      }); */
 
       // Envoi de la requête à l'API pour récupérer les dernières fiches
       fetch("https://partage-ta-fiche.fr/api/lastfiche")
@@ -65,7 +64,7 @@ window.addEventListener("load", (event) => {
             viewfDiv.classList.add("viewf");
 
             const link = document.createElement("a");
-            link.href = `/view/view.html?ficheid=${article.id}`;
+            link.href = `view.html?ficheid=${article.id}`;
             link.innerText = "Voir la fiche";
             viewfDiv.appendChild(link);
             ficherDiv.appendChild(viewfDiv);
@@ -75,4 +74,5 @@ window.addEventListener("load", (event) => {
         })
         .catch((error) => console.error(error));
     });
-});
+
+

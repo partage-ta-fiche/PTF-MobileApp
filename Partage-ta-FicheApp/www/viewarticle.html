@@ -30,37 +30,38 @@
         -->
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self' partage-ta-fiche.fr fonts.googleapis.com; script-src 'unsafe-eval'; connect-src https://partage-ta-fiche.fr http://localhost; script-src-elem 'self';  " />
+      content="default-src 'self' partage-ta-fiche.fr fonts.googleapis.com cdnjs.cloudflare.com; script-src 'unsafe-eval'; connect-src https://partage-ta-fiche.fr http://localhost; script-src-elem 'self';  " />
     <meta name="format-detection" content="telephone=no" />
     <meta name="msapplication-tap-highlight" content="no" />
     <meta
       name="viewport"
       content="initial-scale=1, width=device-width, viewport-fit=cover" />
     <meta name="color-scheme" content="light dark" />
-    <link rel="stylesheet" href="../css/index.css" />
-    <link rel="stylesheet" href="../css/main.css" />
-    <title>Partage ta Fiche</title>
-    
-    <script src="../cordova.js"></script>
-   
-    <script src="../js/viewfiche.js"></script>
-    
-    
-   
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/article.css" />
+
+    <title>Partage-ta-Fiche</title>
+    <script src="js/ejs.js"></script>
+    <script src="js/ejs.min.js"></script>
+    <script src="cordova.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
   </head>
+
   <body>
-   
-    <h1 class="title centered">Partage ta Fiche</h1>
+    <script src="js/viewarticle.js"></script>
+
+    <a href="index.html" style="color: black !important"
+      ><i
+        class="fa-solid fa-arrow-left fa-5x"
+        style="color: black !important"></i
+    ></a>
+    <br /><br />
     
-    <div class="recent" id="root">
 
-    </div>
-    <br><br>
-    <div class="articleview">
-        
-
-    </div>
-
-   
+    <main></main>
   </body>
 </html>
